@@ -1,0 +1,54 @@
+@media(max-width: 1000px) {
+    
+    .inner {
+        max-width: 1000px;
+    }
+    
+    /* header */
+    header .inner .ham,
+    header .inner .my {
+        display: block;
+    }
+    header .inner .logo {
+        
+    }
+    header .inner .menu-wrap {
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: #ffffff;
+        display: block;
+        z-index: 100;
+    }
+    header .inner .menu-wrap .menu ul {
+        display: block;
+    }
+    header .inner .menu-wrap .menu ul li {
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        border-bottom: 0.5px solid #cccccc;
+        box-sizing: border-box;
+    }
+    header .inner .menu-wrap .menu ul li:first-child {
+        border-top: 0.5px solid #cccccc;
+    }
+    header .inner .menu-wrap .menu ul li:nth-child(2n+1) {
+        background: rgb(240, 240, 240);
+    }
+    header .inner .menu-wrap .login-join {
+        height: 80px;
+        justify-content: center;
+        margin-left: 0;
+        background: rgb(240, 240, 240);
+    }
+
+    /* container */
+    
+
+    
+}
