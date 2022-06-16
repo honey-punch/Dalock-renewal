@@ -1,9 +1,9 @@
 $(document).ready(function() {
 
-    location.href = "#menu1";
+    // ham-menu
     
     $(window).resize(function (){  
-        if (window.outerWidth < 1000) {
+        if (window.outerWidth < 1100) {
           $(".menu-wrap").hide();
         } else $(".menu-wrap").show();
     });
@@ -11,13 +11,26 @@ $(document).ready(function() {
     $(".ham").click(function() {
         $(".menu-wrap").slideToggle();
     });
-    
+
+    //section3 
+    setInterval(function() { 
+        $('.general-info .card:first-child')
+          .fadeOut(1000)
+          .next()
+          .fadeIn(1000)
+          .end()
+          .appendTo(".general-info")
+      },  5000);
+
     
     // section4 unit
-    $("#menu1 svg").css("fill", "#2478e6");
+
+    location.href = "#menu1";
+
+    $("#menu1 svg").css("fill", "#5688d7");
        
     $(".tabmenu svg").click(function() {
-        $(this).css("fill", "#2478e6");
+        $(this).css("fill", "#5688d7");
         $(this).parents("li").siblings().find("svg").css("fill", "#555555");
     });
 

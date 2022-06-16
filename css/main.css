@@ -55,7 +55,7 @@ header .inner .menu-wrap .menu ul li {
     margin: 0 20px;
 }
 header .inner .menu-wrap .menu ul li a:hover {
-    color: #2478e6;
+    color: #5688d7;
 }
 header .inner .menu-wrap .login-join {
     display: flex;
@@ -100,6 +100,20 @@ header .inner .menu-wrap .login-join .div-line {
     font-size: 18px;
     line-height: 28px;
 }
+.container .section .inner .copy .btn {
+    padding: 15px 20px;
+    text-align: center;
+    background: #111111;
+    color: #ffffff;
+    position: absolute;
+    top: 250px;
+    font-size: 18px;
+    border-radius: 100px;
+    transition: 0.5s;
+}
+.container .section .inner .copy .btn:hover {
+    opacity: 0.7;
+}
 
 /* section 이미지 */
 .container .section1 {
@@ -112,12 +126,13 @@ header .inner .menu-wrap .login-join .div-line {
 }
 
 /* section 개별속성 */
+/* container section1 */
 .container .section1 .inner .copy {
     color: #ffffff;
     top: 140px;
     left: 80px;
 }
-
+/* container section2 */
 .container .section2 .inner {
     display: flex;
     justify-content: space-between;
@@ -136,13 +151,42 @@ header .inner .menu-wrap .login-join .div-line {
     right: 80px;
 }
 
-
+/* container section3 */
 .container .section3 .inner .copy {
     color: #ffffff;
-    top: 140px;
+    top: 80px;
     left: 80px;
 }
+.container .section3 .inner .copy .general-info {
+    width: 410px;
+    margin-top: 50px;
+    position: absolute;
+}
+.container .section3 .inner .copy .general-info .card {
+    position: absolute;
+}
+.container .section3 .inner .copy .general-info .card img {
+    width: 100%;
+}
+.container .section3 .inner .copy .general-info .card p {
+    position: absolute;
+    top: 185px;
+    left: 50%;
+    width: 85%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 26px;
+}
+.container .section3 .inner .copy .general-info .card:nth-child(2) {
+    display: none;
+}
+.container .section3 .inner .copy .general-info .card:nth-child(3) {
+    display: none;
+}
 
+/* container section4 */
 .container .section4 .inner {
     width: 1100px;
     display: flex;
@@ -228,7 +272,7 @@ header .inner .menu-wrap .login-join .div-line {
 
 
 .fill-blue {
-    fill: #2478e6 !important;
+    fill: #5688d7 !important;
 }
 
 /* footer */
@@ -300,7 +344,7 @@ footer .top .inner .footer-sns a:nth-child(2) {
     margin: 0 12px;
 }
 footer .top .inner .footer-sns a img {
-    width: 20px;
+    width: 30px;
 }
 
 footer .bottom {
