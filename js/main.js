@@ -1,15 +1,16 @@
+// const toggleBtn = document.querySelector('.ham');
+// const menu = document.querySelector('.menu');
+
+// toggleBtn.addEventListener('click', () => {
+//     menu.classList.toggle('active');
+// });
+
 $(document).ready(function() {
 
     // ham-menu
-    
-    $(window).resize(function (){  
-        if (window.outerWidth < 1100) {
-          $(".menu-wrap").hide();
-        } else $(".menu-wrap").show();
-    });
 
     $(".ham").click(function() {
-        $(".menu-wrap").slideToggle();
+        $(".menu").toggleClass('active');
     });
 
     //section3 

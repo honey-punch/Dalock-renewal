@@ -15,58 +15,53 @@ body {
 }
 
 /* header */
-header {
-    width: 100%;
-}
-header .inner {
-    height: 80px;
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background: #ffffff;
+    padding: 16px 100px;
+    height: 80px;
+    box-sizing: border-box;
 }
-header .inner .ham,
-header .inner .my {
+.navbar .ham,
+.navbar .my {
     display: none;
 }
-header .inner svg {
+.navbar svg {
     fill: #333333;
     width: 22px;
 }
-header .inner svg:hover {
+.navbar svg:hover {
     fill: #777777;
 }
-header .inner .logo {
+.navbar .logo {
     
 }
-header .inner .logo a {
-    
-}
-header .inner .logo a img {
+.navbar .logo img {
     height: 45px;
 }
-header .inner .menu-wrap {
-    display: flex;
-    align-items: center;
-}
-header .inner .menu-wrap .menu ul {
+.navbar .menu {
     display: flex;
 }
-header .inner .menu-wrap .menu ul li {
-    margin: 0 20px;
+.navbar .menu li {
+    margin: 0 10px;
 }
-header .inner .menu-wrap .menu ul li a:hover {
+.navbar .menu li a {
+    padding: 5px 10px;
+}
+.navbar .menu li a:hover {
     color: #5688d7;
 }
-header .inner .menu-wrap .login-join {
+.navbar .login-join {
     display: flex;
     align-items: center;
-    margin-left: 30px;
 }
-header .inner .menu-wrap .login-join a {
+.navbar .login-join a {
     color: #555555;
     font-size: 14px;
 }
-header .inner .menu-wrap .login-join .div-line {
+.navbar .login-join .div-line {
     width: 0.5px;
     height: 12px;
     background-color: #555555;
