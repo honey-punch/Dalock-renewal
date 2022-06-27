@@ -4,6 +4,17 @@ body {
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 16px;
     font-weight: 500;
+    background-color: var(--white);
+}
+:root {
+    --main-color: #5688d7;
+    --main-btn-color: #1c1c1c;
+    --white: #f8f8f8;
+    --black: #0d0d0d;
+    --dark-grey: #333333;
+    --grey: #555555;
+    --light-grey: #777777;
+    --very-light-grey: #cccccc;
 }
 /* font-weight 100, 300, 400, 500, 700, 900 */
 .inner {
@@ -15,61 +26,56 @@ body {
 }
 
 /* header */
-header {
-    width: 100%;
-}
-header .inner {
-    height: 80px;
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background: var(--white);
+    padding: 16px 100px;
+    height: 80px;
+    box-sizing: border-box;
 }
-header .inner .ham,
-header .inner .my {
+.navbar .ham,
+.navbar .my {
     display: none;
 }
-header .inner svg {
-    fill: #333333;
+.navbar svg {
+    fill: var(--dark-grey);; 
     width: 22px;
 }
-header .inner svg:hover {
-    fill: #777777;
+.navbar svg:hover {
+    fill: var(--light-grey);
 }
-header .inner .logo {
+.navbar .logo {
     
 }
-header .inner .logo a {
-    
-}
-header .inner .logo a img {
+.navbar .logo img {
     height: 45px;
 }
-header .inner .menu-wrap {
+.navbar .menu {
+    display: flex;
+}
+.navbar .menu li {
+    margin: 0 10px;
+}
+.navbar .menu li a {
+    padding: 5px 10px;
+}
+.navbar .menu li a:hover {
+    color: var(--main-color)
+}
+.navbar .login-join {
     display: flex;
     align-items: center;
 }
-header .inner .menu-wrap .menu ul {
-    display: flex;
-}
-header .inner .menu-wrap .menu ul li {
-    margin: 0 20px;
-}
-header .inner .menu-wrap .menu ul li a:hover {
-    color: #5688d7;
-}
-header .inner .menu-wrap .login-join {
-    display: flex;
-    align-items: center;
-    margin-left: 30px;
-}
-header .inner .menu-wrap .login-join a {
-    color: #555555;
+.navbar .login-join a {
+    color: var(--grey);
     font-size: 14px;
 }
-header .inner .menu-wrap .login-join .div-line {
+.navbar .login-join .div-line {
     width: 0.5px;
     height: 12px;
-    background-color: #555555;
+    background-color: var(--grey);
     margin: 0 10px;
 }
 
@@ -82,23 +88,24 @@ header .inner .menu-wrap .login-join .div-line {
 .container .section {
     width: 100%;
     height: 100%;
-    border-top: 1px solid #cccccc;
+    border-top: 1px solid var(--very-light-grey);
     box-sizing: border-box;
+    display: flex;
 }
 .container .section .side-bar {
-    width: 450px;
-    border-right: 1px solid #cccccc;
+    min-width: 450px;
+    border-right: 1px solid var(--very-light-grey);
     box-sizing: border-box;
 }
 .container .section .side-bar .search {
     width: 100%;
     height: 130px;
-    border-bottom: 1px solid #cccccc;
+    border-bottom: 1px solid var(--very-light-grey);
     padding: 40px;
     box-sizing: border-box;
 }
 .container .section .side-bar .search .search-area {
-    border: 3px solid #5688d7;
+    border: 3px solid var(--main-color);
     box-sizing: border-box;
     border-radius: 100px;
     display: flex;
@@ -123,9 +130,11 @@ header .inner .menu-wrap .login-join .div-line {
 
 .container .section .side-bar .branch-list {
     width: 100%;
+    overflow: scroll;
+    height: 1000px;
 }
 .container .section .side-bar .branch-list li {
-    border-bottom: 1px solid #cccccc;
+    border-bottom: 1px solid var(--very-light-grey);
     padding: 40px;
     box-sizing: border-box;
 }
@@ -139,7 +148,7 @@ header .inner .menu-wrap .login-join .div-line {
     font-weight: 700;
 }
 .container .section .side-bar .branch-list li .branch-name a:hover {
-    color: #5688d7;
+    color: var(--main-color);
 }
 .container .section .side-bar .branch-list li .branch-info1 {
     display: flex;
@@ -151,7 +160,7 @@ header .inner .menu-wrap .login-join .div-line {
     font-weight: 400;
 }
 .container .section .side-bar .branch-list li .branch-info1 .distance {
-    color: #5688d7;
+    color: var(--main-color);
     font-weight: 600;
     margin-left: 10px;
 }
@@ -161,12 +170,30 @@ header .inner .menu-wrap .login-join .div-line {
 .container .section .side-bar .branch-list li .branch-info2 span {
     font-size: 13px;
     font-weight: 400;
-    color: #888888;
+    color: var(--light-grey);
 }
+
+.container .section .map {
+    height: 1130px;
+    width: 2000px;
+    overflow: hidden;
+}
+.container .section .map iframe {
+    width: 100%;
+    height: 100%;
+}
+/* Set the size of the div element that contains the map */
+#map {
+    height: 1130px;
+    /* The height is 400 pixels */
+    width: 100%;
+    /* The width is the width of the web page */
+}
+
 
 /* footer */
 footer {
-    
+    /* margin-top: 50px; */
 }
 footer .top {
     padding: 30px 0;
@@ -180,7 +207,7 @@ footer .top .inner  {
 }
 footer .top .inner .footer-nav {
     display: flex;
-    color: #333333;
+    color: var(--dark-grey);;
 }
 footer .top .inner .footer-nav div {
     margin: 0 30px;
@@ -194,13 +221,13 @@ footer .top .inner .footer-nav div ul li {
 footer .top .inner .footer-nav div ul li a {
     font-size: 12px;
     font-weight: 400;
-    color: #333333;
+    color: var(--dark-grey);;
 }
 footer .top .inner .footer-nav div ul li a:hover {
-    color: #555555;
+    color: var(--grey);
 }
 footer .top .inner .footer-nav .qna {
-    color: #333333;
+    color: var(--dark-grey);;
 }
 footer .top .inner .footer-nav .qna span {
     display: block;
@@ -238,7 +265,7 @@ footer .top .inner .footer-sns a img {
 
 footer .bottom {
     height: 170px;
-    background: #333333;
+    background: var(--dark-grey);;
     color: #888888;
     font-weight: 400;
     font-size: 12px;
@@ -253,7 +280,7 @@ footer .bottom .inner .personal {
     align-items: center;
 }
 footer .bottom .inner .personal a {
-    color: #fff;
+    color: var(--white);
     font-weight: 400;
     font-size: 10px;
     line-height: 16px;
@@ -261,7 +288,7 @@ footer .bottom .inner .personal a {
 footer .bottom .inner .personal .div-line {
     width: 1px;
     height: 8px;
-    background-color: #555555;
+    background-color: var(--grey);
     margin: 0 8px;
 }
 footer .bottom .inner .co-info {

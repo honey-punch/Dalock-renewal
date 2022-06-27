@@ -10,8 +10,25 @@ $(document).ready(function() {
     // ham-menu
 
     $(".ham").click(function() {
-        $(".menu").toggleClass('active');
+        $(".menu").stop().toggleClass('active');
     });
+    
+    $(window).resize(function (){  
+        if (window.outerWidth > 1100) {
+          $(".menu").removeClass("active")
+        }
+    });
+
+    // $(window).resize(function (){  
+    //     if (window.outerWidth < 1100) {
+    //       $(".menu").hide();
+    //     } else $(".menu").show();
+    // });
+
+    // $(".ham").click(function() {
+    //     $(".menu").slideToggle();
+    // });
+     
 
     //section3 
     setInterval(function() { 

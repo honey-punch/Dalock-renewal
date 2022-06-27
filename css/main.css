@@ -4,6 +4,17 @@ body {
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 16px;
     font-weight: 500;
+    background-color: var(--white);
+}
+:root {
+    --main-color:#5688d7;
+    --main-btn-color: #1c1c1c;
+    --white: #f8f8f8;
+    --black: #0d0d0d;
+    --dark-grey: #333333;
+    --grey: #555555;
+    --light-grey: #777777;
+    --very-light-grey: #cccccc;
 }
 /* font-weight 100, 300, 400, 500, 700, 900 */
 .inner {
@@ -19,7 +30,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #ffffff;
+    background: var(--white);
     padding: 16px 100px;
     height: 80px;
     box-sizing: border-box;
@@ -29,11 +40,11 @@ body {
     display: none;
 }
 .navbar svg {
-    fill: #333333;
+    fill: var(--dark-grey);
     width: 22px;
 }
 .navbar svg:hover {
-    fill: #777777;
+    fill: var(--light-grey);
 }
 .navbar .logo {
     
@@ -51,20 +62,20 @@ body {
     padding: 5px 10px;
 }
 .navbar .menu li a:hover {
-    color: #5688d7;
+    color: var(--main-color)
 }
 .navbar .login-join {
     display: flex;
     align-items: center;
 }
 .navbar .login-join a {
-    color: #555555;
+    color: var(--grey);
     font-size: 14px;
 }
 .navbar .login-join .div-line {
     width: 0.5px;
     height: 12px;
-    background-color: #555555;
+    background-color: var(--grey);
     margin: 0 10px;
 }
 
@@ -98,8 +109,8 @@ body {
 .container .section .inner .copy .btn {
     padding: 15px 20px;
     text-align: center;
-    background: #111111;
-    color: #ffffff;
+    background: var(--main-btn-color);
+    color: var(--white);
     position: absolute;
     top: 250px;
     font-size: 18px;
@@ -123,7 +134,7 @@ body {
 /* section 개별속성 */
 /* container section1 */
 .container .section1 .inner .copy {
-    color: #ffffff;
+    color: var(--white);;
     top: 140px;
     left: 80px;
 }
@@ -141,14 +152,14 @@ body {
     margin: 0 auto;
 }
 .container .section2 .inner .copy {
-    color: #000000;
+    color: var(--black);
     top: 140px;
     right: 80px;
 }
 
 /* container section3 */
 .container .section3 .inner .copy {
-    color: #ffffff;
+    color: var(--white);;
     top: 80px;
     left: 80px;
 }
@@ -204,7 +215,7 @@ body {
     width: 400px;
 }
 .container .section4 .inner .right-wrap .copy {
-    color: #000000;
+    color: var(--black);
     position: static;
     margin-bottom: 20px;
 }
@@ -226,7 +237,7 @@ body {
     margin-left: 15px;
 }
 .container .section4 .inner .right-wrap .tabmenu>li:target {
-    background: #fff;
+    background: var(--white);
 }
 .container .section4 .inner .right-wrap .tabmenu>li:target .unit-info {
     display: block;
@@ -238,7 +249,7 @@ body {
 }
 .container .section4 .inner .right-wrap .tabmenu>li a svg {
     cursor: pointer;
-    fill: #555555;
+    fill: var(--grey);
 }
 .container .section4 .inner .right-wrap .tabmenu>li .unit-info {
     position: absolute;
@@ -267,7 +278,7 @@ body {
 
 
 .fill-blue {
-    fill: #5688d7 !important;
+    fill: var(--main-color) !important;
 }
 
 /* footer */
@@ -286,7 +297,7 @@ footer .top .inner  {
 }
 footer .top .inner .footer-nav {
     display: flex;
-    color: #333333;
+    color: var(--dark-grey);;
 }
 footer .top .inner .footer-nav div {
     margin: 0 30px;
@@ -300,13 +311,13 @@ footer .top .inner .footer-nav div ul li {
 footer .top .inner .footer-nav div ul li a {
     font-size: 12px;
     font-weight: 400;
-    color: #333333;
+    color: var(--dark-grey);;
 }
 footer .top .inner .footer-nav div ul li a:hover {
-    color: #555555;
+    color: var(--grey);
 }
 footer .top .inner .footer-nav .qna {
-    color: #333333;
+    color: var(--dark-grey);;
 }
 footer .top .inner .footer-nav .qna span {
     display: block;
@@ -344,7 +355,7 @@ footer .top .inner .footer-sns a img {
 
 footer .bottom {
     height: 170px;
-    background: #333333;
+    background: var(--dark-grey);;
     color: #888888;
     font-weight: 400;
     font-size: 12px;
@@ -359,7 +370,7 @@ footer .bottom .inner .personal {
     align-items: center;
 }
 footer .bottom .inner .personal a {
-    color: #fff;
+    color: var(--white);
     font-weight: 400;
     font-size: 10px;
     line-height: 16px;
@@ -367,7 +378,7 @@ footer .bottom .inner .personal a {
 footer .bottom .inner .personal .div-line {
     width: 1px;
     height: 8px;
-    background-color: #555555;
+    background-color: var(--grey);
     margin: 0 8px;
 }
 footer .bottom .inner .co-info {

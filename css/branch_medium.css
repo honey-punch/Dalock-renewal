@@ -1,50 +1,59 @@
 @media(max-width: 1100px) {
-    
+
     .inner {
         max-width: 1100px;
     }
     
     /* header */
-    header .inner .ham,
-    header .inner .my {
+    .navbar {
+        flex-direction: column;
+        padding: 0;
+    }
+    .navbar .ham,
+    .navbar .my {
         display: block;
-    }
-    header .inner .logo {
-        
-    }
-    header .inner .menu-wrap {
-        display: none;
         position: absolute;
-        top: 80px;
-        left: 0;
-        width: 100%;
-        background: #ffffff;
-        display: block;
-        z-index: 100;
+        top: 28px;
     }
-    header .inner .menu-wrap .menu ul {
-        display: block;
+    .navbar .ham {
+        left: 60px;
     }
-    header .inner .menu-wrap .menu ul li {
+    .navbar .my {
+        right: 60px;
+    }
+    .navbar .logo {
+        box-sizing: border-box;
         height: 80px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        padding: 16px 0;
+    }
+    .navbar .menu {
+        display: none;
+        flex-direction: column;
+        background: var(--white);
+        width: 100%;
+        z-index: 500;
+    }
+    .navbar .menu li {
+        width: 100%;
+        text-align: center;
+        border-bottom: 0.5px solid var(--very-light-grey);
+        box-sizing: border-box;
         margin: 0;
-        border-bottom: 0.5px solid #cccccc;
+        line-height: 80px;
+    }
+    .navbar .menu li:first-child {
+        border-top: 0.5px solid var(--very-light-grey);
         box-sizing: border-box;
     }
-    header .inner .menu-wrap .menu ul li:first-child {
-        border-top: 0.5px solid #cccccc;
+    .navbar .menu li:nth-child(2n+1) {
+        background: #eeeeee;
     }
-    header .inner .menu-wrap .menu ul li:nth-child(2n+1) {
-        background: rgb(240, 240, 240);
+    .navbar .login-join {
+        display: none;
     }
-    header .inner .menu-wrap .login-join {
-        height: 80px;
-        justify-content: center;
-        margin-left: 0;
-        background: rgb(240, 240, 240);
+
+    .menu.active {
+        display: flex;
     }
 
     /* container */
