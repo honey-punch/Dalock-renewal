@@ -199,20 +199,17 @@
             </div>
 
             <div class="map">
-                <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d12655.281118660414!2d126.97893819003245!3d37.53573359068051!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sko!2skr!4v1656297062989!5m2!1sko!2skr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
-
-                <div id="map" style="width:500px;height:400px;"></div>
-                <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=	3641c3354088124f4a7d55609c97d180"></script>
-
-            	<script>
-            		var container = document.getElementById('map');
-		            var options = {
-			                    center: new kakao.maps.LatLng(33.450701, 126.570667),
-			                    level: 3
-		            };
-
-		            var map = new kakao.maps.Map(container, options);
-            	</script>
+                <div id="map"></div>
+                <!-- 
+                 The `defer` attribute causes the callback to execute after the full HTML
+                 document has been parsed. For non-blocking uses, avoiding race conditions,
+                 and consistent behavior across browsers, consider loading using Promises
+                 with https://www.npmjs.com/package/@googlemaps/js-api-loader.
+                -->
+                <script
+                  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
+                  defer
+                ></script>
             </div>
         </div>
     </div>
