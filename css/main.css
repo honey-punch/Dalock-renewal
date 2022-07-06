@@ -16,6 +16,23 @@ body {
     --light-grey: #777777;
     --very-light-grey: #cccccc;
 }
+
+/* 토글 클래스 */
+.block {
+    display: block !important;
+}
+
+.flex {
+    display: flex !important;
+}
+
+.none {
+    display: none !important;
+}
+.fill-blue {
+    fill: var(--main-color) !important;
+}
+
 /* font-weight 100, 300, 400, 500, 700, 900 */
 .inner {
     margin: 0 auto;
@@ -208,9 +225,6 @@ body {
     width: 90%;
     display: none;
 }
-.container .section4 .inner .unit-img img:first-child {
-    display: block;
-}
 .container .section4 .inner .right-wrap {
     width: 400px;
 }
@@ -236,12 +250,12 @@ body {
 .container .section4 .inner .right-wrap .tabmenu>li:nth-child(5) {
     margin-left: 15px;
 }
-.container .section4 .inner .right-wrap .tabmenu>li a {
+.container .section4 .inner .right-wrap .tabmenu>li .tab-icon {
     display: block;
     margin-bottom: 30px;
     width: 55px;
 }
-.container .section4 .inner .right-wrap .tabmenu>li a svg {
+.container .section4 .inner .right-wrap .tabmenu>li .tab-icon svg {
     cursor: pointer;
     fill: var(--grey);
 }
@@ -250,9 +264,6 @@ body {
     left: 0;
     display: none;
     width: 400px;
-}
-#menu1 .unit-info {
-    display: block;
 }
 .container .section4 .inner .right-wrap .tabmenu .unit-info h2 {
     font-size: 24px;
@@ -271,11 +282,6 @@ body {
 }
 .container .section4 .inner .right-wrap .tabmenu .unit-info .info li {
     width: 100%;
-}
-
-
-.fill-blue {
-    fill: var(--main-color) !important;
 }
 
 /* footer */
