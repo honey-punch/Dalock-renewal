@@ -130,6 +130,7 @@ function initMap() {
                 infowindow.open(map, marker);
                 // 지점 정보 슬라이딩
                 branchDetail.style.left = '0px';
+                
             }
         })(marker, i));
         

@@ -5,35 +5,38 @@
     }
     
     /* header */
-    .navbar {
+    header .inner {
         flex-direction: column;
         padding: 0;
     }
-    .navbar .ham,
-    .navbar .my {
+    header .inner .ham,
+    header .inner .my {
         display: block;
         position: absolute;
         top: 28px;
     }
-    .navbar .ham {
+    header .inner .ham {
         left: 60px;
     }
-    .navbar .my {
+    header .inner .my {
         right: 60px;
     }
-    .navbar .logo {
+    header .inner .logo {
         box-sizing: border-box;
         height: 80px;
         padding: 16px 0;
     }
-    .navbar .menu {
+    header .inner nav {
+        width: 100%;
+    }
+    header .inner nav .menu {
         display: none;
         flex-direction: column;
         background: var(--white);
         width: 100%;
         z-index: 500;
     }
-    .navbar .menu li {
+    header .inner nav .menu li {
         width: 100%;
         text-align: center;
         border-bottom: 0.5px solid var(--very-light-grey);
@@ -41,14 +44,14 @@
         margin: 0;
         line-height: 80px;
     }
-    .navbar .menu li:first-child {
+    header .inner nav .menu li:first-child {
         border-top: 0.5px solid var(--very-light-grey);
         box-sizing: border-box;
     }
-    .navbar .menu li:nth-child(2n+1) {
+    header .inner nav .menu li:nth-child(2n+1) {
         background: #eeeeee;
     }
-    .navbar .login-join {
+    header .inner .login-join {
         display: none;
     }
 
