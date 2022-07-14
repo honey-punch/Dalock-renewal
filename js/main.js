@@ -45,22 +45,7 @@ const tabIconSvgList = document.querySelectorAll(".tab-icon svg");
 const unitImgList = document.querySelectorAll(".unit-img img");
 const unitInfoList = document.querySelectorAll(".unit-info");
 
-// tab menu
-// !!탭메뉴와 자동탭메뉴 동기화 시킬것
-for (let i = 0; i < tabIconList.length; i++) {
-    tabIconList[i].addEventListener('click', (e) => {
-        e.preventDefault();
-        for (let j = 0; j < tabIconList.length; j++) {
-            unitImgList[j].classList.remove('block');
-            unitInfoList[j].classList.remove('block');
-            tabIconSvgList[j].classList.remove('fill-blue');
-        }
-        unitImgList[i].classList.add('block');
-        unitInfoList[i].classList.add('block');
-        tabIconSvgList[i].classList.add('fill-blue');
-    })
-};
-
+// 박현우 좟댔어 여기 좟댔어
 // auto tab menu
 let i = 0;
 
@@ -74,9 +59,26 @@ function autoTab () {
     unitInfoList[i].classList.add('block');
     tabIconSvgList[i].classList.add('fill-blue');
     i++;
-    if(i >= tabIconSvgList.length) {
+    if(i === tabIconSvgList.length) {
         i = 0;
     }
 }
 
-setInterval(autoTab, 5000);
+setInterval(autoTab, 1000);
+
+// tab menu
+let intervalId = setInterval();
+
+for (let i = 0; i < tabIconList.length; i++) {
+    tabIconList[i].addEventListener('click', (e) => {
+        e.preventDefault();
+        for (let j = 0; j < tabIconList.length; j++) {
+            unitImgList[j].classList.remove('block');
+            unitInfoList[j].classList.remove('block');
+            tabIconSvgList[j].classList.remove('fill-blue');
+        }
+        unitImgList[i].classList.add('block');
+        unitInfoList[i].classList.add('block');
+        tabIconSvgList[i].classList.add('fill-blue');
+    })
+}
