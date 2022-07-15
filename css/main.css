@@ -152,13 +152,13 @@ main .section3 {
 }
 
 /* section 개별속성 */
-/* container section1 */
+/* main section1 */
 main .section1 .inner .copy {
     color: var(--white);;
     top: 140px;
     left: 80px;
 }
-/* container section2 */
+/* main section2 */
 main .section2 .inner {
     display: flex;
     justify-content: space-between;
@@ -177,7 +177,7 @@ main .section2 .inner .copy {
     right: 80px;
 }
 
-/* container section3 */
+/* main section3 */
 main .section3 .inner .copy {
     color: var(--white);;
     top: 80px;
@@ -212,7 +212,7 @@ main .section3 .inner .copy .general-info .card:nth-child(3) {
     display: none;
 }
 
-/* container section4 */
+/* main section4 */
 main .section4 .inner {
     width: 1100px;
     display: flex;

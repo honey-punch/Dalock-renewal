@@ -33,6 +33,9 @@ body {
 .block {
     display: block !important;
 }
+.flex {
+    display: flex !important;
+}
 .left {
     left: 0 !important;
 }
@@ -97,7 +100,7 @@ header .inner .login-join .div-line {
     margin: 0 10px;
 }
 
-/* container */
+/* main */
 main {
     width: 100%;
     height: 100%;
@@ -106,7 +109,7 @@ main {
     display: flex;
 }
 
-/* section */
+/* aside */
 
 main aside {
     min-width: 450px;
@@ -456,7 +459,7 @@ main aside .branch-detail .btn-group a:last-child {
     background: var(--grey);
 }
 
-
+/* map */
 main .map-area {
     height: 1100px;
     width: 100%;

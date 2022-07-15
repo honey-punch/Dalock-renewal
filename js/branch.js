@@ -17,13 +17,14 @@ window.addEventListener('resize', () => {
 const branchList = document.querySelectorAll('.branch-name-btn');
 const back = document.querySelector(".img .back");
 const branchDetail = document.querySelector(".branch-detail");
+let branchDetailWidth = branchDetail.clientWidth;
 
 branchList.forEach((item) => {item.addEventListener('click', () => {
     branchDetail.style.left = '0px';
 })})
 
 back.addEventListener('click', () => {
-    branchDetail.style.left = '-450px';
+    branchDetail.style.left = `-${branchDetailWidth}px`;
 });
 
 //branch info object & array 
@@ -98,13 +99,13 @@ function initMap() {
 
     // The marker
     // marker img
-    const markerImg = './img/map-marker.png'
-    const markerImgWhite = './img/map-marker(white).png'
+    let markerImg = './img/map-marker.png'
+    let markerImgWhite = './img/map-marker(white).png'
 
-    const infowindow = new google.maps.InfoWindow();
+    let infowindow = new google.maps.InfoWindow();
 
     for (let i = 0; i < locations.length; i++) {
-        marker = new google.maps.Marker({
+        let marker = new google.maps.Marker({
             map: map,
             // label: {text: locations[i].place},
             position: new google.maps.LatLng(locations[i].lat, locations[i].lng),
@@ -130,6 +131,7 @@ function initMap() {
                 infowindow.open(map, marker);
                 // 지점 정보 슬라이딩
                 branchDetail.style.left = '0px';
+                // 마커 이미지 변경
                 
             }
         })(marker, i));
@@ -143,7 +145,6 @@ function initMap() {
             });
         }
     }
-    
 }
 
 window.initMap = initMap;
