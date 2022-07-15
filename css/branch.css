@@ -10,15 +10,14 @@ body {
     background-color: var(--white);
 }
 :root {
-    --main-color: #5688d7;
+    --main-color:#5688d7;
     --main-btn-color: #1c1c1c;
-    --white: #f8f8f8;
+    --white: #f9f8f8;
     --black: #0d0d0d;
     --dark-grey: #333333;
     --grey: #555555;
     --light-grey: #777777;
     --very-light-grey: #cccccc;
-    --red: #c10000;
 }
 
 /* font-weight 100, 300, 400, 500, 700, 900 */
