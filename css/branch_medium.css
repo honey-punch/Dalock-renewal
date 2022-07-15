@@ -53,14 +53,5 @@
     }
     header .inner .login-join {
         display: none;
-    }
-
-    .menu.active {
-        display: flex;
-    }
-
-    /* container */
-    
-
-    
+    }  
 }

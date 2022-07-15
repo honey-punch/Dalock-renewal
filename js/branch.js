@@ -4,12 +4,12 @@ const ham = document.querySelector(".ham");
 const menu = document.querySelector(".menu");
 
 ham.addEventListener('click', () => {
-    menu.classList.toggle("active");
+    menu.classList.toggle("flex");
 })
 
 window.addEventListener('resize', () => {
     if (window.outerWidth > 1100) {
-        menu.classList.remove("active")
+        menu.classList.remove("flex")
     }
 });
 
