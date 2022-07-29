@@ -33,9 +33,6 @@ body {
 .block {
     display: block !important;
 }
-.flex {
-    display: flex !important;
-}
 .left {
     left: 0 !important;
 }

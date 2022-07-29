@@ -36,6 +36,9 @@
         width: 100%;
         z-index: 500;
     }
+    header .inner nav .menu.flex {
+        display: flex;
+    }
     header .inner nav .menu li {
         width: 100%;
         text-align: center;

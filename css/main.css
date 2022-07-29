@@ -17,22 +17,6 @@ body {
     --very-light-grey: #cccccc;
 }
 
-/* 토글 클래스 */
-.block {
-    display: block !important;
-}
-
-.flex {
-    display: flex !important;
-}
-
-.none {
-    display: none !important;
-}
-.fill-blue {
-    fill: var(--main-color) !important;
-}
-
 /* font-weight 100, 300, 400, 500, 700, 900 */
 .inner {
     margin: 0 auto;
@@ -228,6 +212,10 @@ main .section4 .inner .unit-img img {
     width: 90%;
     display: none;
 }
+main .section4 .inner .unit-img img.block,
+main .section4 .inner .unit-img img:first-child.block {
+    display: block;
+}
 main .section4 .inner .right-wrap {
     width: 400px;
 }
@@ -242,6 +230,9 @@ main .section4 .inner .right-wrap .tabmenu {
 }
 main .section4 .inner .right-wrap .tabmenu>li {
     margin: 0 5px;
+}
+main .section4 .inner .right-wrap .tabmenu>li:first-child svg.fill-blue {
+    fill: var(--main-color);
 }
 main .section4 .inner .right-wrap .tabmenu>li:nth-child(1) {
     margin-left: 0;
@@ -262,11 +253,18 @@ main .section4 .inner .right-wrap .tabmenu>li .tab-icon svg {
     cursor: pointer;
     fill: var(--grey);
 }
+main .section4 .inner .right-wrap .tabmenu>li .tab-icon svg.fill-blue {
+    fill: var(--main-color);
+}
 main .section4 .inner .right-wrap .tabmenu>li .unit-info {
     position: absolute;
     left: 0;
     display: none;
     width: 400px;
+}
+main .section4 .inner .right-wrap .tabmenu>li .unit-info.block,
+main .section4 .inner .right-wrap .tabmenu>li:first-child .unit-info.block {
+    display: block;
 }
 main .section4 .inner .right-wrap .tabmenu .unit-info h2 {
     font-size: 24px;
