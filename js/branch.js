@@ -58,7 +58,7 @@ const faqToggleMenu = document.querySelectorAll(".faq-list ul");
 for (let i = 0; i < faqToggleBtn.length; i++) {
     faqToggleBtn[i].addEventListener('click', (e) => {
         e.preventDefault();
-        faqToggleBtn[i].classList.toggle('clicked')
+        faqToggleBtn[i].classList.toggle('clicked');
         faqToggleMenu[i].classList.toggle('block');
     })
 };

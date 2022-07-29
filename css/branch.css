@@ -17,7 +17,7 @@ body {
     --dark-grey: #333333;
     --grey: #555555;
     --light-grey: #777777;
-    --very-light-grey: #cccccc;
+    --very-light-grey: #dedede;
 }
 
 /* font-weight 100, 300, 400, 500, 700, 900 */
@@ -27,17 +27,6 @@ body {
     max-width: 1300px;
     padding: 0 50px;
     box-sizing: border-box;
-}
-
-/* toggle class */
-.block {
-    display: block !important;
-}
-.left {
-    left: 0 !important;
-}
-.clicked {
-    transform: rotate(-180deg) !important;
 }
 
 /* header */
@@ -107,7 +96,6 @@ main {
 }
 
 /* aside */
-
 main aside {
     min-width: 450px;
     border-right: 1px solid var(--very-light-grey);
@@ -412,6 +400,10 @@ main aside .branch-detail .notice .notice-list ul {
     list-style: square inside;
     margin-top: 20px;
 }
+main aside .branch-detail .faq .faq-list ul.block,
+main aside .branch-detail .notice .notice-list ul.block {
+    display: block;
+}
 main aside .branch-detail .faq .faq-list ul li,
 main aside .branch-detail .notice .notice-list ul li {
     font-size: 14px;
@@ -420,6 +412,10 @@ main aside .branch-detail .notice .notice-list ul li {
     line-height: 18px;
     text-indent: -20px;
     padding-left: 20px;
+}
+main aside .branch-detail .faq .faq-list i.clicked,
+main aside .branch-detail .notice .notice-list i.clicked {
+    transform: rotate(-180deg)
 }
 
 main aside .branch-detail .promotion {
@@ -477,12 +473,12 @@ main .map-area {
 
 /* footer */
 footer {
-    /* margin-top: 50px; */
+    
 }
 footer .top {
     padding: 30px 0;
     box-sizing: border-box;
-    background: #f4f4f4;
+    background: var(--very-light-grey);
 }
 footer .top .inner  {
     height: 140px;

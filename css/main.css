@@ -14,7 +14,7 @@ body {
     --dark-grey: #333333;
     --grey: #555555;
     --light-grey: #777777;
-    --very-light-grey: #cccccc;
+    --very-light-grey: #dedede;
 }
 
 /* font-weight 100, 300, 400, 500, 700, 900 */
@@ -287,12 +287,12 @@ main .section4 .inner .right-wrap .tabmenu .unit-info .info li {
 
 /* footer */
 footer {
-    margin-top: 50px;
+    
 }
 footer .top {
     padding: 30px 0;
     box-sizing: border-box;
-    background: #f4f4f4;
+    background: var(--very-light-grey);
 }
 footer .top .inner  {
     height: 140px;
