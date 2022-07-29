@@ -144,16 +144,16 @@ main aside .branch-list li {
     padding: 40px;
     box-sizing: border-box;
 }
-main aside .branch-list li .branch-name {
+main aside .branch-list li .branch-name-area {
     display: flex;
     justify-content: space-between;
 }
-main aside .branch-list li .branch-name a {
+main aside .branch-list li .branch-name-area a {
     font-size: 20px;
     margin-bottom: 15px;
     font-weight: 700;
 }
-main aside .branch-list li .branch-name a:hover {
+main aside .branch-list li .branch-name-area a:hover {
     color: var(--main-color);
 }
 main aside .branch-list li .branch-info1 {
@@ -242,24 +242,24 @@ main aside .branch-detail .branch-info .temperature {
 main aside .branch-detail .branch-info .title {
     margin-bottom: 18px;
 }
-main aside .branch-detail .branch-info .title h1 {
+main aside .branch-detail .branch-info .title .branch-name {
     font-size: 30px;
     margin-bottom: 8px;
 }
-main aside .branch-detail .branch-info .title span {
+main aside .branch-detail .branch-info .title .description {
     font-size: 12px;
     color: var(--light-grey);
 }
-main aside .branch-detail .branch-info .address {
+main aside .branch-detail .branch-info .location {
 
 }
-main aside .branch-detail .branch-info .address span {
+main aside .branch-detail .branch-info .location .branch-detail-address {
     display: block;
     margin-bottom: 8px;
     color: var(--main-color);
     font-weight: 700;
 }
-main aside .branch-detail .branch-info .address span:nth-child(2) {
+main aside .branch-detail .branch-info .location .public-transport {
     color: var(--light-grey);
     font-size: 14px;
     font-weight: 500;

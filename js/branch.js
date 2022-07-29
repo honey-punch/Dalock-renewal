@@ -14,12 +14,12 @@ window.addEventListener('resize', () => {
 });
 
 // brach-detail
-const branchList = document.querySelectorAll('.branch-name-btn');
+const branchNameBtn = document.querySelectorAll('.branch-name-btn');
 const back = document.querySelector(".img .back");
 const branchDetail = document.querySelector(".branch-detail");
 let branchDetailWidth = branchDetail.clientWidth;
 
-branchList.forEach((item) => {item.addEventListener('click', () => {
+branchNameBtn.forEach((item) => {item.addEventListener('click', () => {
     branchDetail.style.left = '0px';
 })})
 
@@ -29,27 +29,44 @@ back.addEventListener('click', () => {
 
 //branch info object & array 
 class BranchInfo {
-    constructor(id, imgSrc, temperature, name, description, address, publicTransport) {
-        this.id = id;
+    constructor(imgSrc, temperature, branchName, description, address, publicTransport) {
         this.imgSrc = imgSrc;
         this.temperature = temperature;
-        this.name = name;
+        this.branchName = branchName;
         this.description = description;
         this.address = address;
         this.publicTransport = publicTransport;
     }
 }
 
-const yongSan = new BranchInfo('yongSan', './img/지점이미지용산점.jpeg','22℃   45%', '용산점', '지하철 4개 노선과 인접해 접근성이 좋은 지점', '서울 용산구 원효로 210-30 (신계동)', '6호선 효창공원역  3번 출구 도보 7분')
-const bullGwang = new BranchInfo('bullGwang' ,'./img/지점이미지불광점.jpeg','20℃   50%', '불광점', '1인 가구 소형 짐보관에 특화된 은평구 유일 셀스프스토리지', '서울 은평구 진흥로 148 참솔빌딩 6F', '6호선 불광역 6번출구 도보 7분')
-const guro = new BranchInfo('guro' ,'./img/지점이미지구로역점.jpg','21℃   47%', '구로역점', '구로역에서 가장 가까운 셀프스토리지, 구로역 역세권 지점', '서울 구로구 구로중앙로 134 리치몰 B1', '1호선 구로역 1번 출구 도보 3분')
-const lotteWorld = new BranchInfo('lotteWorld' ,'./img/지점이미지롯데월드점.jpg','27℃   42%', '롯데월드점', '롯데월드 타워 바로 옆에 위치한 잠실역 역세권 지점', '서울 송파구 올림픽로 240 (잠실동) 롯데월드 웰빙센터 8층', '2호선 잠실역 4번 출구 도보 5분')
-const mokDong2 = new BranchInfo('mokDong2' ,'./img/지점이미지목동2호점.jpg','25℃   42%', '목동2호점', '소형 짐보관, 생활용품, 의류보관에 최적화 지점', '서울 양천구 목동동로 411 B1', '9호선 신목동역 2번 출구 도보 17분')
-const suYou = new BranchInfo('suYou' ,'./img/지점이미지수유역점.jpeg','26℃   45%', '수유역점', '2호선 성수역과 가장 가까운 역세권 셀프스토리지', '서울 성동구 아차산로 126 B7', '성수역 3번 출구 도보 2분')
-const mullae = new BranchInfo('mullae' ,'./img/지점이미지문래점.jpeg','21℃   44%', '문래점', '양평역에서 가장 가까운 셀프스토리지, 양평역 역세권 지점', '서울 영등포구 영등포로 21 (양평동2가) B1', '5호선 양평역 2번 출구 도보 4분')
-const garden5 = new BranchInfo('garden5' ,'./img/지점이미지가든파이브점.jpeg','26℃   42%', '가든파이브점', '석촌고분역 인근, 역세권 지점', '서울 송파구 삼학사로 47 B1', '9호선 석촌고분역 4번출구')
+const yongSan = new BranchInfo('./img/지점이미지용산점.jpeg','22℃ / 45%', '용산점', '지하철 4개 노선과 인접해 접근성이 좋은 지점', '서울 용산구 원효로 210-30 (신계동)', '6호선 효창공원역  3번 출구 도보 7분')
+const bullGwang = new BranchInfo('./img/지점이미지불광점.jpeg','20℃ / 50%', '불광점역', '1인 가구 소형 짐보관에 특화된 은평구 유일 셀스프스토리지', '서울 은평구 진흥로 148 참솔빌딩 6F', '6호선 불광역 6번출구 도보 7분')
+const guro = new BranchInfo('./img/지점이미지구로역점.jpg','21℃ / 47%', '구로역점', '구로역에서 가장 가까운 셀프스토리지, 구로역 역세권 지점', '서울 구로구 구로중앙로 134 리치몰 B1', '1호선 구로역 1번 출구 도보 3분')
+const lotteWorld = new BranchInfo('./img/지점이미지롯데월드점.jpg','27℃ / 42%', '롯데월드점', '롯데월드 타워 바로 옆에 위치한 잠실역 역세권 지점', '서울 송파구 올림픽로 240 (잠실동) 롯데월드 웰빙센터 8층', '2호선 잠실역 4번 출구 도보 5분')
+const mokDong2 = new BranchInfo('./img/지점이미지목동2호점.jpg','25℃ / 42%', '목동2호점', '소형 짐보관, 생활용품, 의류보관에 최적화 지점', '서울 양천구 목동동로 411 B1', '9호선 신목동역 2번 출구 도보 17분')
+const suYou = new BranchInfo('./img/지점이미지수유역점.jpeg','26℃ / 45%', '수유역점', '2호선 성수역과 가장 가까운 역세권 셀프스토리지', '서울 성동구 아차산로 126 B7', '성수역 3번 출구 도보 2분')
+const mullae = new BranchInfo('./img/지점이미지문래점.jpeg','21℃ / 44%', '문래점', '양평역에서 가장 가까운 셀프스토리지, 양평역 역세권 지점', '서울 영등포구 영등포로 21 (양평동2가) B1', '5호선 양평역 2번 출구 도보 4분')
+const garden5 = new BranchInfo('./img/지점이미지가든파이브점.jpeg','26℃ / 42%', '가든파이브점', '석촌고분역 인근, 역세권 지점', '서울 송파구 삼학사로 47 B1', '9호선 석촌고분역 4번출구')
 
 const brachInfoList = [yongSan, bullGwang, guro, lotteWorld, mokDong2, suYou, mullae, garden5];
+
+let imgSrc = document.querySelector('.img img');
+let temperature = document.querySelector('.temperature span');
+let branchName = document.querySelector('.branch-name');
+let description = document.querySelector('.description');
+let branchDetailAddress = document.querySelector('.branch-detail-address');
+let publicTransport = document.querySelector('.public-transport');
+
+for (let i = 0; i < branchNameBtn.length; i++) {
+    branchNameBtn[i].addEventListener('click', () => {
+        //imgSrc.getAttribute('src') = brachInfoList[i].imgSrc;
+        temperature.textContent = brachInfoList[i].temperature;
+        branchName.textContent = brachInfoList[i].branchName;
+        description.textContent = brachInfoList[i].description;
+        branchDetailAddress.textContent = brachInfoList[i].address;
+        publicTransport.textContent = brachInfoList[i].publicTransport;
+    })
+}
 
 // faq toggle
 const faqToggleBtn = document.querySelectorAll(".faq-list i");
