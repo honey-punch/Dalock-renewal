@@ -15,28 +15,54 @@ window.addEventListener('resize', () => {
 
 // jQuery
 
-$(document).ready(function() {
+// $(document).ready(function() {
     
-    //section3 
-    setInterval(function() { 
-        $('.general-info .card:first-child')
-            .fadeOut(1000)
-            .next()
-            .fadeIn(1000)
-            .end()
-            .appendTo(".general-info")
-    },  5000);
+//     //section3 
+//     setInterval(function() { 
+//         $('.general-info .card:first-child')
+//             .fadeOut(1000)
+//             .next()
+//             .fadeIn(1000)
+//             .end()
+//             .appendTo(".general-info")
+//     },  5000);
     
-});
+// });
+
+// section3
+// fade in & out
+const cards = document.querySelectorAll('.card');
+const cardFirst = document.querySelector('.card:first-child');
+cardFirst.style.opacity = 0;
+
+function fadeOut(element) {
+    if (element.style.opacity > 0) {
+        setTimeout(function () {
+            element.style.opacity -= 0.02;
+            fadeOut(element);
+        }, 50);
+    }
+}
+
+
+
+function fadeIn(element) {
+    if (element.style.opacity < 1) {
+        setTimeout(function () {
+            element.style.opacity += 0.02;
+            fadeIn(element);
+        }, 50);
+    }
+}
+fadeIn(cardFirst);
+
+
+
 
 // section4
-// tab frist icon color
+// tab frist icon color & img & info
 document.querySelector(".tabmenu li:first-child svg").classList.add('fill-blue');
-
-// tab first img
 document.querySelector(".unit-img img:first-child").classList.add('block');
-
-//tab first info
 document.querySelector(".tabmenu li:first-child .unit-info").classList.add('block');
 
 // tab icon & unit img & unit info
